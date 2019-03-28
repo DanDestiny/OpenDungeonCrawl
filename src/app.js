@@ -1,5 +1,5 @@
 import  *  as PIXI from "pixi.js";
-import * as Grid from "./gridmap";
+import { GridMap } from "./grid/gridmap";
 
 let app = new PIXI.Application(1280, 720, {
     transparent : false,
@@ -9,12 +9,14 @@ let app = new PIXI.Application(1280, 720, {
 document.body.appendChild(app.view);
 
 // Create Grid
-var mapGrid = Grid.gridMap(14, 8, 96);
+var mapGrid = new GridMap(14, 8, 96);
+var gridArray = mapGrid.gridArray;
+//var mapGrid = Grid.gridMap(14, 8, 96);
 console.log(mapGrid);
 debugShowGrid();
 
 function debugShowGrid(){
-    mapGrid.forEach(row => {
+    gridArray.forEach(row => {
         row.forEach(cell => {
             var cellText = new PIXI.Text("Cell");
             cellText.x = cell.x + (cell.size/2);
@@ -23,7 +25,7 @@ function debugShowGrid(){
                 fill: 0x000000
             });
             app.stage.addChild(cellText);
-            //console.log(cell);
+            console.log(cell);
         });
     });
 }
