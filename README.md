@@ -1,4 +1,5 @@
-# OpenDungeonCrawl
+# OpenDungeonCrawl 
+[![Build Status](https://travis-ci.org/DanDestiny/OpenDungeonCrawl.svg?branch=master)](https://travis-ci.org/DanDestiny/OpenDungeonCrawl)
 
 1. Install Packages
 `npm install`
