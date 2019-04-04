@@ -1,6 +1,6 @@
 var PIXI = require('pixi.js');
 
-export class GridCell{
+class GridCell{
     constructor(x, y, size, renderer){
         // have cell stuff
         this.x = x;
@@ -16,3 +16,5 @@ export class GridCell{
         renderer.addChild(graphics);
     }
 }
+
+exports.GridCell = GridCell;

@@ -1,6 +1,6 @@
-import {GridCell} from './gridcell';
+var GridCell = require('./gridcell').GridCell;
 
-export class GridMap {
+class GridMap {
     constructor(rows, columns, pixelSize, renderer){
         this.rows = rows;
         this.columns = columns;
@@ -14,6 +14,8 @@ export class GridMap {
         return this.gridArray[row][column];
     }
 }
+
+exports.GridMap = GridMap;
 
 function createGrid(rows, columns, size, renderer){
     var gridArr = [];

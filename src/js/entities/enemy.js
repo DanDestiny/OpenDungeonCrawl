@@ -1,4 +1,4 @@
-export class Enemy{
+class Enemy{
     constructor(){
 
     }
