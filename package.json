@@ -1,7 +1,7 @@
 {
-  "name": "pixitest",
+  "name": "opendungeoncrawl",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Open Source Dungeon Crawler",
   "scripts": {
     "test": "karma start",
     "start": "npm run clean && parcel src/index.html",
