@@ -44,8 +44,8 @@ class GridMap {
         let arr = [];
         let min_x = Math.max(0, col - range);
         let min_y = Math.max(0, row - range);
-        let max_x = Math.min(this.columns, col + range);
-        let max_y = Math.min(this.rows, row + range);
+        let max_x = Math.min(this.columns - 1, col + range);
+        let max_y = Math.min(this.rows - 1, row + range);
         console.log(row, col);
         for (let j = min_y; j <= max_y; j++) {
             for (let i = min_x; i <= max_x; i++) {
@@ -55,40 +55,6 @@ class GridMap {
         }
         return arr;
     }
-
-    // getCellInRange(cellPos, range){
-    //     var row = cellPos.row;
-    //     var col = cellPos.col;
-    //     var arr = [];
-    //     for (let i = 1; i <= range; i++) {
-    //         //console.log(typeof(this.gridArray[row + i][col]));
-    //         if(typeof(this.gridArray[row + i][col]) != undefined){
-    //             arr.push(this.gridArray[row + i][col]);
-    //         }
-    //         if(typeof(this.gridArray[row - i][col]) != undefined){
-    //             arr.push(this.gridArray[row - i][col]);
-    //         }
-    //         if(typeof(this.gridArray[row][col + i]) != undefined){
-    //             arr.push(this.gridArray[row][col + i]);
-    //         }
-    //         if(typeof(this.gridArray[row][col - i]) != undefined){
-    //             arr.push(this.gridArray[row][col - i]);
-    //         }
-    //         if(typeof(this.gridArray[row + i][col + i]) != undefined){
-    //             arr.push(this.gridArray[row + i][col + i]);
-    //         }
-    //         if(typeof(this.gridArray[row - i][col - i]) != undefined){
-    //             arr.push(this.gridArray[row - i][col - i]);
-    //         }
-    //         if(typeof(this.gridArray[row + i][col - i]) != undefined){
-    //             arr.push(this.gridArray[row + i][col - i]);
-    //         }
-    //         if(typeof(this.gridArray[row - i][col + i]) != undefined){
-    //             arr.push(this.gridArray[row - i][col + i]);
-    //         }
-    //     }
-    //     return arr;
-    // }
 
     getCenterCell(){
         console.log("rows: " + this.rows/2 + " Rounded: " +  Math.round(this.rows / 2));

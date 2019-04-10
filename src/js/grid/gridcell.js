@@ -28,7 +28,7 @@ class GridCell{
             return;
 
         this.cellGraphics.clear();
-        this.cellGraphics.beginFill(GREEN);
+        this.cellGraphics.beginFill(GREEN, 0.7);
         this.cellGraphics.lineStyle(5, 0xFF0000);
         this.cellGraphics.drawRect(this.x, this.y, this.size, this.size);
         //this.renderer.render(this.cellGraphics);

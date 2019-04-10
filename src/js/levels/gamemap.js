@@ -10,7 +10,7 @@ class GameMap{
     constructor(levelJson, viewport){
         // Create Grid
         this.viewport = viewport;
-        this.mapGrid = new GridMap(15, 9, 96, this.viewport);
+        this.mapGrid = new GridMap(10, 10, 96, this.viewport);
         this.gridArray = this.mapGrid.gridArray;
         var centercell = this.mapGrid.getCenterCell();
         this.player = new Player(centercell.getCenterX(), centercell.getCenterY(), 32, this.viewport);
