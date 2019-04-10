@@ -38,18 +38,15 @@ gameMap.getMovableCells();
 gameMap.debugShowGrid();
 
 viewport.on("clicked", function(e){
-    console.log(e);
-    //console.log(e.data.global.x);
-    player.setPosition(e.world.x, e.world.y);
     // TODO: Check for cells here 
     var cellClicked = gameMap.getCellFromPosition(e.world.x, e.world.y);
     if (cellClicked != null){
-        cellClicked.changeColour();
-        console.log("Cell Clicked: " + cellClicked);
+        if (gameMap.checkMovableCells(cellClicked)){ 
+            player.setPosition(cellClicked.getCenterX(),cellClicked.getCenterY());
+            player.currentCell = cellClicked;
+            gameMap.getMovableCells();
+        }
     }
-    console.log("Cell Clicked: " + cellClicked);
-    // Check if appropriate cell
-    // TODO: Move player to cell
 });
 
 

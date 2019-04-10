@@ -23,7 +23,7 @@ class GridCell{
     }
 
     availableCellColour (){
-        console.log("Colour Change");
+        //console.log("Colour Change");
         if (this.hasPlayer)
             return;
 
