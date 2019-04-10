@@ -43,10 +43,6 @@ class GridMap {
         var col = cellPos.col;
         var arr = [];
         for (let i = 1; i <= range; i++) {
-            for (let j = 0; j < i; j++) {
-                const element = array[j];
-                
-            }
             if(this.gridArray[row + i][col] != null){
                 arr.push(this.gridArray[row + i][col]);
             }
